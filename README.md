@@ -51,8 +51,8 @@ TabPFN v2 requires Python 3.9+.
 The project is designed for **Google Colab** for easy access to GPU resources. 
 
 1. Open the notebook in Google Colab:
-[![Open In Colab]
-(https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17Ksc87CQLq2OKk8BHYj24ae2NUBeM039?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1grAogXgmrFUoEVFpiA37CAr0XwYDYSYY?usp=sharing)
+
 
 2. Enable GPU acceleration in Google Colab:
 - Go to **Edit → Notebook settings**
