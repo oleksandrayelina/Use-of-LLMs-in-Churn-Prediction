@@ -22,7 +22,6 @@ Experimental Pipeline:
 - [Reproducing results](#Reproducing-results)
     - [Training code](#Training-code)
     - [Evaluation code](#Evaluation-code)
-    - [Pretrained models](#Pretrained-models)
 - [Results](#Results)
 - [Project structure](-Project-structure)
 
@@ -74,10 +73,6 @@ Training logic is encapsulated in functions within the notebook `src/churn_predi
 ### Evaluation code
 
 Evaluation logic (ROC AUC, PR AUC calculations, plotting) is stored in functions in the same notebook.
-
-### Pretrained models
-
-Pretrained model predictions (probabilities) are stored in the `results/` directory for reuse.
 
 ## Results
 
