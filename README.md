@@ -71,7 +71,7 @@ In the `results/` folder, the following are stored as `.pkl` files:
 - training times
 - predicted probabilities
 
-These files can be loaded to reproduce evaluation and plots without rerunning training.
+These files can be loaded in "Reproducible results" part in the notebook to reproduce evaluation and plots without rerunning training.
 
 ### Training code
 
