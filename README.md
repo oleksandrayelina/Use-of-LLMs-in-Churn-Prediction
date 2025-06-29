@@ -1,18 +1,14 @@
-# Title
+# Use of LLMs in Churn Prediction: An Empirical Evaluation of Tabular Data Foundation Models
 
-**Type:** Master's Thesis / Bachelor's Thesis
+**Type:** Master's Thesis 
 
-**Author:** xxx
+**Author:** Oleksandra Yelina
 
-**Supervisor:** xxx (only if different from the 1st or the 2nd Examiner)
+**1st Examiner:** Prof. Dr. Stefan Lessmann 
 
-**1st Examiner:** xxx 
+**2nd Examiner:** Prof. Dr. Katarzyna Reluga  
 
-**2nd Examiner:** xxx 
-
-[Insert here a figure explaining your approach or main results]
-
-![results](/result.png)
+![results](/experimental_pipeline.png)
 
 ## Table of Content
 
@@ -29,12 +25,17 @@
 
 ## Summary
 
-(Short summary of motivation, contributions and results)
+Churn prediction is a widely used business task for detecting customers at risk. In this work, we explore the application of tabular foundation models for churn prediction. While traditional machine learning models are best practices in the field, they typically require significant preprocessing, training, and tuning. Recent advances in tabular modalities of foundation models, such as TabPFN, provide competitive performance with minimal implementation effort. However, their capabilities in churn prediction have not been well explored.
 
-**Keywords**: xxx (give at least 5 keywords / phrases).
+This study compares TabPFN and its variants on four datasets related to churn. It also compares them with five benchmark models in their predictive performance (ROC AUC, PR AUC), training time, and ease of implementation.
 
-**Full text**: [include a link that points to the full text of your thesis]
-*Remark*: a thesis is about research. We believe in the [open science](https://en.wikipedia.org/wiki/Open_science) paradigm. Research results should be available to the public. Therefore, we expect dissertations to be shared publicly. Preferably, you publish your thesis via the [edoc-server of the Humboldt-Universität zu Berlin](https://edoc-info.hu-berlin.de/de/publizieren/andere). However, other sharing options, which ensure permanent availability, are also possible. <br> Exceptions from the default to share the full text of a thesis require the approval of the thesis supervisor.  
+The results show that TabPFN models achieve the highest ROC AUC and PR AUC scores. The Auto-TabPFN variant achieved the highest averaged PR AUC (0.615) and ROC AUC (0.875), while TabPFN Subsample represented the best trade-off between performance and efficiency. TabPFN is easier to apply than selected benchmarks since it operates directly on raw datasets without manual tuning.
+
+The results validate the capacity of tabular foundation models as effective tools for predicting customer churn.
+
+**Keywords**: churn prediction, TabPFN, tabular foundation model, large language model, tabular data.
+
+**Full text**: The full text for this work is available [here](https://box.hu-berlin.de/d/d4b08d1fe1424c5fb3dd/).
 
 ## Working with the repo
 
@@ -46,61 +47,52 @@ Does a repository have information on dependencies or instructions on how to set
 
 ### Setup
 
-[This is an example]
+The project is designed for **Google Colab** for easy access to GPU resources.
 
-1. Clone this repository
+To enable GPU acceleration in Google Colab:
+- Go to **Edit → Notebook settings**
+- Select **GPU** from the **Hardware accelerator** drop-down
 
-2. Create an virtual environment and activate it
-```bash
-python -m venv thesis-env
-source thesis-env/bin/activate
-```
-
-3. Install requirements
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+This ensures that the fastest version of TabPFN is used during experiments.
 
 ## Reproducing results
 
-Describe steps how to reproduce your results.
+All experiments use a **fixed random seed** for reproducibility.
 
-Here are some examples:
-- [Paperswithcode](https://github.com/paperswithcode/releasing-research-code)
-- [ML Reproducibility Checklist](https://ai.facebook.com/blog/how-the-ai-community-can-get-serious-about-reproducibility/)
-- [Simple & clear Example from Paperswithcode](https://github.com/paperswithcode/releasing-research-code/blob/master/templates/README.md) (!)
-- [Example TensorFlow](https://github.com/NVlabs/selfsupervised-denoising)
+In the `results/` folder, the following are stored as `.pkl` files:
+- metrics
+- training times
+- predicted probabilities
+
+These files can be loaded to reproduce evaluation and plots without rerunning training.
 
 ### Training code
 
-Does a repository contain a way to train/fit the model(s) described in the paper?
+Training logic is encapsulated in functions within the notebook `src/churn_prediction.ipynb`.
 
 ### Evaluation code
 
-Does a repository contain a script to calculate the performance of the trained model(s) or run experiments on models?
+Evaluation logic (ROC AUC, PR AUC calculations, plotting) is stored in functions in the same notebook.
 
 ### Pretrained models
 
-Does a repository provide free access to pretrained model weights?
+Pretrained model predictions (probabilities) are stored in the `results/` directory for reuse.
 
 ## Results
 
-Does a repository contain a table/plot of main results and a script to reproduce those results?
+A detailed evaluation of the prediction results is provided in the thesis text. Additionally, intermediate and final results (plots, metrics) can be found in:
+- `results/`
+- `plots/`
+- `src/churn_prediction.ipynb`
 
 ## Project structure
 
-(Here is an example from SMART_HOME_N_ENERGY, [Appliance Level Load Prediction](https://github.com/Humboldt-WI/dissertations/tree/main/SMART_HOME_N_ENERGY/Appliance%20Level%20Load%20Prediction) dissertation)
-
 ```bash
-├── README.md
-├── requirements.txt                                -- required libraries
-├── data                                            -- stores csv file 
-├── plots                                           -- stores image files
-└── src
-    ├── prepare_source_data.ipynb                   -- preprocesses data
-    ├── data_preparation.ipynb                      -- preparing datasets
-    ├── model_tuning.ipynb                          -- tuning functions
-    └── run_experiment.ipynb                        -- run experiments 
-    └── plots                                       -- plotting functions                 
+├── README.md 
+├── datasets/ -- stores CSV files of datasets
+├── plots/ -- stores image files for visualizations
+├── results/ -- stores metrics, training times, predicted probabilities (pkl files)
+└── src/
+  └── churn_prediction.ipynb -- main notebook for preprocessing, training, and evaluation
+               
 ```
