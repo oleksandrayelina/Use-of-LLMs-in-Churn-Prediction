@@ -43,9 +43,7 @@ The results validate the capacity of tabular foundation models as effective tool
 
 ### Dependencies
 
-Which Python version is required? 
-
-Does a repository have information on dependencies or instructions on how to set up the environment?
+No manual installation of dependencies required — the notebook will install needed packages as part of setup in Google Colab.
 
 ### Setup
 
