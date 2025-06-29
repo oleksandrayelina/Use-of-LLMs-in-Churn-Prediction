@@ -50,7 +50,7 @@ TabPFN v2 requires Python 3.9+.
 
 The project is designed for **Google Colab** for easy access to GPU resources. 
 
-1. Open the notebook in Google Colab:
+1. Open the notebook in Google Colab using the link or download churn_prediction.ipynb file from src folder upload it to Google Colab:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1grAogXgmrFUoEVFpiA37CAr0XwYDYSYY?usp=sharing)
 
 
