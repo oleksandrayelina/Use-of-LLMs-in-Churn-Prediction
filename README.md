@@ -71,7 +71,7 @@ In the `results/` folder, the following are stored as `.pkl` files:
 - training times
 - predicted probabilities
 
-These files can be loaded in "FINAL RESULTS" section in the Google Colab notebook to reproduce evaluation and plots without rerunning training.
+These files can be loaded in "FINAL RESULTS" section in the Google Colab notebook to reproduce evaluation and final tables without rerunning training.
 
 ### Training code
 
@@ -95,6 +95,7 @@ A detailed evaluation of the prediction results is provided in the thesis text. 
 ├── datasets/ -- stores CSV files of datasets
 ├── plots/ -- stores image files for visualizations
 ├── results/ -- stores metrics, training times, predicted probabilities (pkl files)
+├── experimental_pipeline.png    -- example of experimental approach
 └── src/
   └── churn_prediction.ipynb -- main notebook for preprocessing, training, and evaluation
                
