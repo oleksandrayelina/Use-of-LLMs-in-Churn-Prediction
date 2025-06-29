@@ -8,8 +8,7 @@
 
 **2nd Examiner:** Prof. Dr. Katarzyna Reluga  
 
-
-
+Experimental Pipeline:
 ![results](/experimental_pipeline.png)
 
 ## Table of Content
