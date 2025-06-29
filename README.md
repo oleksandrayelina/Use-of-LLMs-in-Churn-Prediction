@@ -44,6 +44,7 @@ The results validate the capacity of tabular foundation models as effective tool
 ### Dependencies
 
 No manual installation of dependencies required — the notebook will install needed packages as part of setup in Google Colab.
+TabPFN v2 requires Python 3.9+.
 
 ### Setup
 
